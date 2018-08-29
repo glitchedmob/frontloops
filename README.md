@@ -1,4 +1,4 @@
-# frontloops-1
+# frontloops
 
 ## Project setup
 ```
