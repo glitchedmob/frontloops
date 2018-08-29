@@ -1,11 +1,14 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-  </div>
+    <div class="home">
+        <img alt="Vue logo" src="../assets/logo.png">
+    </div>
 </template>
 
 <script>
-export default {
-  name: 'home',
-}
+    export default {
+        name: 'home',
+        metaInfo: {
+            title: 'Home'
+        }
+    };
 </script>

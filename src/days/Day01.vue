@@ -4,10 +4,12 @@
 
 <script>
 export default {
-
+    metaInfo: {
+        title: 'Loop 1 Step 1'
+    }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
