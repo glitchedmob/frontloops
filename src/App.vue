@@ -1,15 +1,7 @@
 <template>
     <div id="main">
-        <div id="nav">
+        <div id="nav" v-if="$route.path !== '/'">
             <router-link to="/" class="app-nav-item">Home</router-link>
-            <router-link
-                v-for="(day, i) in days"
-                :key="i"
-                :to="{ path: `/day-${i + 1}` }"
-                class="app-nav-item"
-            >
-                Day {{ i + 1}}
-            </router-link>
         </div>
         <div id="content">
             <router-view />
@@ -85,8 +77,8 @@
         position: fixed;
         top: 0;
         background: white;
-        width: 100%;
-        height: 4rem;
+        /*width: 100%;*/
+        /*height: 4rem;*/
 
         .app-nav-item {
             display: inline-block;

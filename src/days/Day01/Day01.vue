@@ -11,7 +11,7 @@
                 </p>
                 <div class="card-callout">
                     <p class="price">
-                        <span class="dollar">$</span>
+                        <sup class="dollar">$</sup>
                         10
                     </p>
                     <p class="period">/ month</p>
@@ -28,7 +28,7 @@
                 </p>
                 <div class="card-callout">
                     <p class="price">
-                        <span class="dollar">$</span>
+                        <sup class="dollar">$</sup>
                         15
                     </p>
                     <p class="period">/ month</p>
@@ -44,7 +44,7 @@
                 </p>
                 <div class="card-callout">
                     <p class="price">
-                        <span class="dollar">$</span>
+                        <sup class="dollar">$</sup>
                         20
                     </p>
                     <p class="period">/ month</p>
@@ -87,6 +87,7 @@ export default {
         width: percentage(1/3);
         padding: 0 3rem;
         text-align: center;
+        transition: all 250ms ease-in-out;
 
         &:hover,
         &:focus {
@@ -115,5 +116,20 @@ export default {
 
     .card-callout {
         color: $dark-text;
+    }
+
+    .price, .period {
+        display: inline-block;
+    }
+
+    .price {
+        font-size: 3rem;
+        margin-right: .5rem;
+
+        .dollar {
+            font-size: 1.5rem;
+            left: 1rem;
+            top: -1rem;
+        }
     }
 </style>
