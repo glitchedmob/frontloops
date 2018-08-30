@@ -2,6 +2,7 @@
     <div id="main">
         <div id="nav" v-if="$route.path !== '/'">
             <router-link to="/" class="app-nav-item">Home</router-link>
+            <portal-target name="nav" class="app-nav-item-wrapper"/>
         </div>
         <div id="content">
             <router-view />
@@ -79,6 +80,10 @@
         background: white;
         /*width: 100%;*/
         /*height: 4rem;*/
+
+        .app-nav-item-wrapper {
+            display: inline-block;
+        }
 
         .app-nav-item {
             display: inline-block;

@@ -1,5 +1,9 @@
 <template>
     <div id="day-01">
+        <design-video-links
+            design="/day01/Loop 1 - Step 1.png"
+            video="/day01/Loop 1 - Step 1.mp4"
+        />
         <div class="card-wrapper">
             <div class="card">
                 <div class="icon">
@@ -55,11 +59,16 @@
 </template>
 
 <script>
-export default {
-    metaInfo: {
-        title: 'Loop 1 Step 1'
+    import DesignVideoLinks from '../../components/DesignVideoLinks';
+
+    export default {
+        metaInfo: {
+            title: 'Loop 1 Step 1',
+        },
+        components: {
+            DesignVideoLinks,
+        }
     }
-}
 </script>
 
 <style lang="scss" scoped>
