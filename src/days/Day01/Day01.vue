@@ -77,17 +77,28 @@ export default {
 
     .card-wrapper {
         background-color: white;
-        width: 80%;
+        width: 100%;
+        max-width: 900px;
         margin: 5rem auto 0;
         padding: 2rem;
         display: flex;
+        box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+
+        @media(max-width: 1000px) {
+            flex-wrap: wrap;
+            max-width: 380px;
+        }
     }
 
     .card {
         width: percentage(1/3);
-        padding: 0 3rem;
+        padding: 2rem 4rem;
         text-align: center;
-        transition: all 250ms ease-in-out;
+        transition: background-color 250ms ease-in-out;
+
+        @media(max-width: 1000px) {
+            width: 100%;
+        }
 
         &:hover,
         &:focus {
@@ -120,15 +131,17 @@ export default {
 
     .price, .period {
         display: inline-block;
+        margin: 0;
     }
 
     .price {
         font-size: 3rem;
-        margin-right: .5rem;
+        margin: 1rem .5rem 0 0;
+        font-weight: bold;
 
         .dollar {
             font-size: 1.5rem;
-            left: 1rem;
+            left: .8rem;
             top: -1rem;
         }
     }
