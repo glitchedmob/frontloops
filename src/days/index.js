@@ -1,4 +1,4 @@
-import Day01 from './Day01.vue';
+const Day01 = () => import('./Day01/Day01.vue');
 
 export default {
     Day01,
