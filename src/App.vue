@@ -105,14 +105,8 @@
         }
     }
 
-    #main {
-        padding-top: 4rem;
-        width: 100%;
-        height: 100%;
-    }
-
     #content {
-        width: 100%;
-        height: 100%;
+        max-width: 100vw;
+        height: 100vh;
     }
 </style>
