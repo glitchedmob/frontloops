@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Meta from 'vue-meta';
 
 import Home from './views/Home.vue';
-import Days from './days';
+import Loops from './loops';
 
 Vue.use(Router);
 Vue.use(Meta);
@@ -18,9 +18,12 @@ export default new Router({
       component: Home
     },
 
-    ...Object.keys(Days).map((Day, i) => ({
-      path: `/day-${i + 1}`,
-      component: Days[Day],
-    }))
+      ...Loops.reduce((all, loop, loopIndex) => ([
+          ...all,
+          ...loop.map((step, stepIndex) => ({
+              path: `/loop-${loopIndex + 1}/step-${stepIndex + 1}`,
+              component: step,
+          })),
+      ]), []),
   ]
 })

@@ -1,8 +1,8 @@
 <template>
-    <div id="day-01">
+    <div id="loop1-step1">
         <design-video-links
-            design="/day01/Loop 1 - Step 1.png"
-            video="/day01/Loop 1 - Step 1.mp4"
+            design="/loop1/step1/Loop 1 - Step 1.png"
+            video="/loop1/step1/Loop 1 - Step 1.mp4"
         />
         <div class="card-wrapper">
             <div class="card">
@@ -59,7 +59,7 @@
 </template>
 
 <script>
-    import DesignVideoLinks from '../../components/DesignVideoLinks';
+    import DesignVideoLinks from '../../../components/DesignVideoLinks';
 
     export default {
         metaInfo: {
@@ -76,7 +76,7 @@
     $dark-text: #5b73cf;
     $light-text: #b2aaa7;
 
-    #day-01 {
+    #loop1-step1 {
         padding-top: 4rem;
         width: 100%;
         height: 100%;

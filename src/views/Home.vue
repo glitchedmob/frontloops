@@ -1,22 +1,28 @@
 <template>
     <div id="home">
         <router-link
-            v-for="(day, i) in days"
+            v-for="(link, i) in links"
             :key="i"
-            :to="{ path: `/day-${i + 1}` }"
-            class="day-link"
+            :to="{ path: link.path }"
+            class="loop-step-link"
         >
-            Day {{ i + 1}}
+            {{ link.title }}
         </router-link>
     </div>
 </template>
 
 <script>
-    import Days from '../days';
+    import Loops from '../loops';
 
     export default {
         data: () => ({
-            days: Object.keys(Days)
+            links: Loops.reduce((all, loop, loopIndex) => ([
+                ...all,
+                ...loop.map((step, stepIndex) => ({
+                    path: `/loop-${loopIndex + 1}/step-${stepIndex + 1}`,
+                    title: `Loop ${loopIndex + 1} Step ${stepIndex + 1}`,
+                })),
+            ]), []),
         }),
         metaInfo: {
             title: 'Home',
@@ -29,8 +35,9 @@
         padding-top: 2rem;
     }
 
-    .day-link {
+    .loop-step-link {
         color: #333;
+        display: block;
         text-decoration: none;
         transition: all 250ms ease-in-out;
         padding: 1.5rem 1rem;

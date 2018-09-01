@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import Days from './days';
+    import Days from './loops';
 
     export default {
         data: () => ({
